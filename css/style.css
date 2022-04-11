@@ -1,0 +1,236 @@
+/* defaults */
+
+    /* fonts */
+
+@font-face {
+    font-family: Roboto;
+    src: url('/fonts/Roboto-Black.ttf');
+    font-weight: 900;
+  }
+
+@font-face {
+    font-family: Roboto;
+    src: url('/fonts/Roboto-Bold.ttf');
+    font-weight: bold;
+  }
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/Roboto-Medium.ttf');
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/Roboto-Regular.ttf');
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url('/fonts/Roboto-Light.ttf');
+  font-weight: light;
+}
+
+@font-face {
+  font-family: SairaSemiCondensed;
+  src: url('/fonts/SairaSemiCondensed-Medium.ttf');
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: SairaSemiCondensed;
+  src: url('/fonts/SairaSemiCondensed-Regular.ttf');
+  font-weight: regular;
+}
+
+
+/* global */
+
+:root {
+  --primary-color: #2A2A2A;
+  --secondary-color: #9B9B9B;
+  --dark-color: #000000;
+  --light-color: #f4f4f4;
+  --success-color: #00A96D;
+  --error-color: #EA3A9E;
+  --highlight-color: #00889B;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-family: 'Roboto', sans-serif;
+  }
+
+.container {
+  padding-left: 75px;
+}
+  
+ /* top section */
+
+#header-top {
+  height: 180px;
+}
+
+#title-web {
+  /* border: #00889B; 
+  border-style: solid; */
+  display: flex;
+  font-weight: 900;
+  font-size: 125px;
+  letter-spacing: -6px;
+  margin-left: 50px;
+  padding-top: 30px;
+}
+
+#title-dev {
+  /* border: #00889B; 
+  border-style: solid; */
+  display: flex;
+  font-weight: bold;
+  font-size: 125px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 400px;
+  width: 400px;
+}
+
+#title-blue {
+  /* border: #00889B; 
+  border-style: solid; */
+  font-weight: regular;
+  font-size: 85px;
+  letter-spacing: 10px;
+  margin-left: 65px;
+  margin-top: -10px;
+
+}
+  
+#title-contact {
+  /* border: #00889B; 
+  border-style: solid; */
+  color: var(--highlight-color);
+  transition: all .5s ease-in-out;
+}
+
+#title-contact:hover {
+  letter-spacing: 5px;
+  margin-left: -2%;
+  text-shadow:
+    -0.4px -0.4px 0 var(--highlight-color),
+    0.4px -0.4px 0 var(--highlight-color),
+    -0.4px 0.4px 0 var(--highlight-color),
+    0.4px 0.4px 0 var(--highlight-color);
+}
+
+#title-contact:visited, #title-contact:focus, #title-contact:active {
+  text-decoration:none;
+}
+
+.pill-hover-l {
+	text-decoration: none;
+  position: relative;
+}
+
+.pill-hover-l::before {
+  content: '';
+  background-color: var(--highlight-color);
+  position: absolute;
+  border-radius: 50px;
+  left: -78px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 0 15px 5px #00000033;
+}
+
+.pill-hover-l:hover::before {
+  width: 80px;
+  height: 80px;
+  bottom: 7px;
+  left: -92px;
+  box-shadow: 0 0 15px 5px #0000006c;
+  
+}
+
+.dot-contact {
+	text-decoration: none;
+  position: fixed;
+}
+
+.dot-contact::before {
+  content: '';
+  background-color: var(--highlight-color);
+  position: absolute;
+  border-radius: 50px; 
+  bottom: 0px;
+  width: 15px;
+  height: 15px;
+  left: -66px;
+  top: 14px;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+  box-shadow: 0 0 15px 5px #0000005f;
+  opacity: 0;
+}
+
+.dot-contact:hover::before {
+  opacity: 1;
+}
+
+
+/* body-start */
+
+#main-row-l {
+  color: var(--light-color);
+  font-family: 'SairaSemiCondensed', sans-serif;
+  font-size: 26px;
+  letter-spacing: 4px;
+  height: 300px;
+  margin-top: 40px;
+  margin-left: 51px;
+}
+
+#main-text  {
+  padding-bottom: 15px;
+}
+
+#name {
+  color: var(--highlight-color);
+  transition: all .5s ease-in-out;
+}
+#name:hover {
+  color: var(--highlight-color);
+  letter-spacing: 5px;
+  margin-left: -0.5%;
+  text-shadow:
+    -0.4px -0.4px 0 var(--highlight-color),
+    0.4px -0.4px 0 var(--highlight-color),
+    -0.4px 0.4px 0 var(--highlight-color),
+    0.4px 0.4px 0 var(--highlight-color);
+}
+
+#name:visited, #name:focus, #name:active {
+  text-decoration:none;
+}
+
+.main-decorate {
+  margin-left: -60px;
+  margin-right: 47px;
+}
+
+/* effects */
