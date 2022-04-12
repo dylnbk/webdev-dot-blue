@@ -87,24 +87,19 @@ body {
 #title-web {
   /* border: #00889B; 
   border-style: solid; */
-  display: flex;
   font-weight: 900;
   font-size: 125px;
   letter-spacing: -6px;
-  margin-left: 50px;
-  padding-top: 30px;
+  margin-left: 125px;
+  padding-top: 10px;
 }
 
 #title-dev {
   /* border: #00889B; 
   border-style: solid; */
-  display: flex;
   font-weight: bold;
   font-size: 125px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 400px;
-  width: 400px;
+  padding-right: 300px;
 }
 
 #title-blue {
@@ -113,30 +108,9 @@ body {
   font-weight: regular;
   font-size: 85px;
   letter-spacing: 10px;
-  margin-left: 65px;
-  margin-top: -10px;
+  margin-left: 140px;
+  margin-top: -20px;
 
-}
-  
-#title-contact {
-  /* border: #00889B; 
-  border-style: solid; */
-  color: var(--highlight-color);
-  transition: all .5s ease-in-out;
-}
-
-#title-contact:hover {
-  letter-spacing: 5px;
-  margin-left: -2%;
-  text-shadow:
-    -0.4px -0.4px 0 var(--highlight-color),
-    0.4px -0.4px 0 var(--highlight-color),
-    -0.4px 0.4px 0 var(--highlight-color),
-    0.4px 0.4px 0 var(--highlight-color);
-}
-
-#title-contact:visited, #title-contact:focus, #title-contact:active {
-  text-decoration:none;
 }
 
 .pill-hover-l {
@@ -161,76 +135,140 @@ body {
 .pill-hover-l:hover::before {
   width: 80px;
   height: 80px;
-  bottom: 7px;
+  bottom: 12px;
   left: -92px;
   box-shadow: 0 0 15px 5px #0000006c;
   
 }
 
-.dot-contact {
+.dot {
 	text-decoration: none;
-  position: fixed;
+
 }
 
-.dot-contact::before {
+.dot::before {
+  position: relative;
   content: '';
   background-color: var(--highlight-color);
   position: absolute;
   border-radius: 50px; 
-  bottom: 0px;
-  width: 15px;
-  height: 15px;
-  left: -66px;
-  top: 14px;
+  width: 17px;
+  height: 17px;
+  left: 77px;
+  margin-top: 12px;
   z-index: -1;
   transition: all .3s ease-in-out;
   box-shadow: 0 0 15px 5px #0000005f;
   opacity: 0;
 }
 
-.dot-contact:hover::before {
+.dot:hover::before {
   opacity: 1;
+  z-index: 1;
 }
 
 
 /* body-start */
 
-#main-row-l {
+#main-side {
+  color: var(--light-color);
+  font-family: 'SairaSemiCondensed', sans-serif;
+  font-size: 26px;
+  width: 20px;
+  margin-left: 80px;
+}
+
+#main-text  {
+  flex: 1 1 auto;
   color: var(--light-color);
   font-family: 'SairaSemiCondensed', sans-serif;
   font-size: 26px;
   letter-spacing: 4px;
-  height: 300px;
-  margin-top: 40px;
-  margin-left: 51px;
 }
 
-#main-text  {
-  padding-bottom: 15px;
+#page {
+  display: flex;
+  padding-top: 10px;
 }
 
 #name {
   color: var(--highlight-color);
   transition: all .5s ease-in-out;
+  padding-left: 8x;
+  display: inline-block;
 }
+
 #name:hover {
-  color: var(--highlight-color);
-  letter-spacing: 5px;
-  margin-left: -0.5%;
+  color: var(--light-color);
+  transform: scale(1.03, 1.03);
   text-shadow:
-    -0.4px -0.4px 0 var(--highlight-color),
-    0.4px -0.4px 0 var(--highlight-color),
-    -0.4px 0.4px 0 var(--highlight-color),
-    0.4px 0.4px 0 var(--highlight-color);
+    -0.4px -0.4px 1px var(--light-color),
+    0.4px -0.4px 1px var(--light-color),
+    -0.4px 0.4px 1px var(--light-color),
+    0.4px 0.4px 1px var(--light-color);
 }
 
 #name:visited, #name:focus, #name:active {
   text-decoration:none;
 }
 
-.main-decorate {
-  margin-left: -60px;
-  margin-right: 47px;
+#contact {
+  color: var(--highlight-color);
+  transition: all .5s ease-in-out;
+  display: inline-block;
+}
+
+#contact:hover {
+  color: var(--light-color);
+  transform: scale(1.02, 1.02);
+  text-shadow:
+    -0.4px -0.4px 1px var(--light-color),
+    0.4px -0.4px 1px var(--light-color),
+    -0.4px 0.4px 1px var(--light-color),
+    0.4px 0.4px 1px var(--light-color);
+}
+
+#contact:visited, #contact:focus, #contact:active {
+  text-decoration:none;
+}
+
+/* padding fixes */
+
+#side-pad-a {
+  padding-bottom: 30px;
+}
+
+#side-pad-b {
+  padding-bottom: 30px;
+  padding-left: 45px;
+  white-space: nowrap;
+}
+
+#me {
+  padding-left: 120px;
 }
 
 /* effects */
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 2s steps(20, end),
+    caret 2s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 200px; }
+}
+
+/* The typewriter cursor effect */
+@keyframes caret {
+  from { border-color: transparent }
+  1% { border-color: white }
+  90% { border-color: white}
+  to { border-color: transparent }
+}
