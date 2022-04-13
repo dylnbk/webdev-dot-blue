@@ -26,15 +26,14 @@
 @font-face {
   font-family: Roboto;
   src: url('/fonts/Roboto-Regular.ttf');
-  font-weight: regular;
+  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: Roboto;
-  src: url('/fonts/Roboto-Light.ttf');
-  font-weight: light;
-  font-display: swap;
+  src: url('/fonts/Roboto-Thin.ttf');
+  font-weight: 300;
 }
 
 @font-face {
@@ -79,6 +78,7 @@ body {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-family: 'Roboto', sans-serif;
+    width: 100%;
   }
 
 .container {
@@ -89,41 +89,47 @@ body {
 
 #header-top {
   height: 180px;
-  animation: fadein 2s;
+  animation: fadein-head 1s;
+
 }
 
 #title-web {
-  /* border: #00889B; 
-  border-style: solid; */
+  /*border: #00889B; 
+  border-style: solid;*/
   font-weight: 900;
   font-size: 125px;
   letter-spacing: -6px;
   margin-left: 125px;
-  padding-top: 10px;
+  flex-shrink: 1;
 }
 
 #title-dev {
-  /* border: #00889B; 
-  border-style: solid; */
+  /*border: #00889B; 
+  border-style: solid;*/
   font-weight: bold;
   font-size: 125px;
-  padding-right: 300px;
+  margin-right: auto;
+  flex-shrink: 2;
 }
 
 #title-blue {
-  /* border: #00889B; 
-  border-style: solid; */
-  font-weight: regular;
+  /*border: #00889B; 
+  border-style: solid;*/
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 85px;
   letter-spacing: 10px;
   margin-left: 140px;
-  margin-top: -20px;
-  animation: fadein 2s;
+  margin-top: -50px;
+  animation: fadein-head 1s;
+}
 
+#page {
+  display: flex;
+  padding-top: 20px;
 }
 
 .pill-hover-l {
-	text-decoration: none;
   position: relative;
 }
 
@@ -164,7 +170,7 @@ body {
   width: 17px;
   height: 17px;
   left: 77px;
-  margin-top: 12px;
+  margin-top: 15px;
   z-index: -1;
   transition: all .3s ease-in-out;
   box-shadow: 0 0 15px 5px #0000007c;
@@ -195,11 +201,6 @@ body {
   letter-spacing: 4px;
 }
 
-#page {
-  display: flex;
-  padding-top: 10px;
-}
-
 #name {
   color: var(--highlight-color);
   transition: all .5s ease-in-out;
@@ -209,7 +210,7 @@ body {
 
 #name:hover {
   color: var(--light-color);
-  transform: scale(1.03, 1.03);
+  transform: scale(1.05, 1.05);
   text-shadow:
     -0.4px -0.4px 1px var(--light-color),
     0.4px -0.4px 1px var(--light-color),
@@ -229,7 +230,7 @@ body {
 
 #contact:hover {
   color: var(--light-color);
-  transform: scale(1.02, 1.02);
+  transform: scale(1.05, 1.05);
   text-shadow:
     -0.4px -0.4px 1px var(--light-color),
     0.4px -0.4px 1px var(--light-color),
@@ -245,17 +246,17 @@ body {
 
 #side-a {
   padding-bottom: 30px;
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 
 #side-b {
   padding-bottom: 30px;
-  animation: fadein 5.5s;
+  animation: fadein 4.2s;
 }
 
 #side-c {
   padding-bottom: 30px;
-  animation: fadein 10s;
+  animation: fadein 7.8s;
 }
 
 
@@ -283,6 +284,8 @@ body {
 }
 
 
+/* The typing effect */
+
 .typewriter-a {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   width: 0;
@@ -291,16 +294,14 @@ body {
   animation: 
     typing-a 2s steps(20, end) forwards,
     caret-a 2s;
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 
-/* The typing effect */
 @keyframes typing-a {
   from { width: 0 }
   to { width: 220px; }
 }
 
-/* The typewriter cursor effect */
 @keyframes caret-a {
   from { border-color: transparent }
   1% { border-color: white }
@@ -314,18 +315,16 @@ body {
   border-right: .15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   animation: 
-    typing-b 3s steps(30, end) forwards,
-    caret-b 3s;
-  animation-delay: 5s;
+    typing-b 2.5s steps(30, end) forwards,
+    caret-b 2.5s;
+  animation-delay: 4s;
 }
 
-/* The typing effect */
 @keyframes typing-b {
   from { width: 0 }
   to { width: 370px; }
 }
 
-/* The typewriter cursor effect */
 @keyframes caret-b {
   from { border-color: transparent }
   1% { border-color: white }
@@ -339,20 +338,134 @@ body {
   border-right: .15em solid transparent; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   animation: 
-    typing-c 1.5s steps(20, end) forwards,
+    typing-c 2s steps(20, end) forwards,
     caret-c 1s infinite;
-  animation-delay: 9s;
+  animation-delay: 7.5s;
 }
 
-/* The typing effect */
 @keyframes typing-c {
   from { width: 0 }
-  to { width: 170px; }
+  to { width: 240px; }
 }
 
-/* The typewriter cursor effect */
 @keyframes caret-c {
   from { border-color: transparent }
   50% { border-color: white }
   to { border-color: transparent }
 }
+
+@media screen and (max-width: 1023px) {
+  #title-web {
+    font-size: 100px;
+    letter-spacing: -5px;
+  }
+
+  #title-dev {
+    font-size: 100px;
+  }
+
+  #title-blue {
+    font-size: 70px;
+    margin-top: -80px;
+    margin-left: 137px;
+  }
+
+  .pill-hover-l::before {
+    bottom: 17px;
+  }
+
+  .pill-hover-l:hover::before {
+    width: 70px;
+    height: 70px;
+    bottom: 12px;
+    left: -90px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  #title-web {
+    font-size: 60px;
+    margin-left: 20%;
+    letter-spacing: -3px;
+  }
+
+  #title-dev {
+    font-size: 60px;
+
+  }
+
+  #title-blue {
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-top: -120px;
+    margin-left: 50px;
+  }
+
+  .pill-hover-l::before {
+    bottom: 8px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .pill-hover-l:hover::before {
+    bottom: 7px;
+    left: -32px;
+    width: 25px;
+    height: 25px;
+  }
+
+  #main-side {
+    margin-top: -10px;
+    font-size: 12px;
+    width: 20px;
+    margin-left: 25px;
+  }
+
+  #side-a {
+    padding-bottom: 25px;
+  }
+  
+  #side-b {
+    padding-bottom: 25px;
+  }
+  
+  #side-c {
+    padding-bottom: 25px;
+  }
+
+  #side-pad-b {
+    padding-bottom: 25px;
+    font-size: 12px;
+    padding-left: 7px;
+    white-space: nowrap;
+  }
+
+  #main-text {
+    margin-top: -10px;
+  }
+
+  .dot::before {
+    border-radius: 50px; 
+    width: 8px;
+    height: 8px;
+    left: 23px;
+    margin-top: 6px;
+  }
+
+  @keyframes typing-a {
+    from { width: 0 }
+    to { width: 130px; }
+  }
+
+  @keyframes typing-b {
+    from { width: 0 }
+    to { width: 210px; }
+  }
+
+  @keyframes typing-c {
+    from { width: 0 }
+    to { width: 142px; }
+  }
+}
+
