@@ -24,16 +24,9 @@
 }
 
 @font-face {
-  font-family: SairaSemiCondensed;
-  src: url('/fonts/SairaSemiCondensed-Medium.ttf');
+  font-family: UbuntuLight;
+  src: url('/fonts/Ubuntu-Light.ttf');
   font-weight: medium;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: SairaSemiCondensed;
-  src: url('/fonts/SairaSemiCondensed-Regular.ttf');
-  font-weight: regular;
   font-display: swap;
 }
 
@@ -159,8 +152,8 @@ body {
   border-radius: 50px; 
   width: 17px;
   height: 17px;
-  left:27px;
-  margin-top: 15px;
+  left:26px;
+  margin-top: 8px;
   z-index: -1;
   transition: all .3s ease-in-out;
   box-shadow: 0 0 15px 5px #0000007c;
@@ -177,7 +170,7 @@ body {
 
 #main-side {
   color: var(--light-color);
-  font-family: 'SairaSemiCondensed', sans-serif;
+  font-family: 'UbuntuLight', sans-serif;
   font-size: 26px;
   width: 20px;
   margin-left: 28px;
@@ -186,9 +179,9 @@ body {
 #main-text  {
   flex: 1 1 auto;
   color: var(--light-color);
-  font-family: 'SairaSemiCondensed', sans-serif;
-  font-size: 26px;
+  font-family: 'UbuntuLight', sans-serif;
   letter-spacing: 4px;
+  font-size: 26px;
 }
 
 #name {
@@ -310,7 +303,7 @@ body {
 
 @keyframes typing-a {
   from { width: 0 }
-  to { width: 220px; }
+  to { width: 237px; }
 }
 
 @keyframes caret-a {
@@ -333,7 +326,7 @@ body {
 
 @keyframes typing-b {
   from { width: 0 }
-  to { width: 370px; }
+  to { width: 378px; }
 }
 
 @keyframes caret-b {
@@ -356,7 +349,7 @@ body {
 
 @keyframes typing-c {
   from { width: 0 }
-  to { width: 240px; }
+  to { width: 263px; }
 }
 
 @keyframes caret-c {
@@ -388,8 +381,8 @@ body {
   .pill-hover-l:hover::before {
     width: 70px;
     height: 70px;
-    bottom: 12px;
-    left: -90px;
+    bottom: 8px;
+    left: -88px;
   }
 }
 
@@ -420,7 +413,7 @@ body {
   }
 
   .pill-hover-l:hover::before {
-    bottom: 7px;
+    bottom: 5px;
     left: -32px;
     width: 25px;
     height: 25px;
@@ -448,9 +441,9 @@ body {
   #side-pad-b {
     padding-bottom: 25px;
     font-size: 12px;
-    padding-left: 0px;
+    padding-left: 7px;
     white-space: nowrap;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 
   #main-text {
@@ -462,7 +455,7 @@ body {
     width: 8px;
     height: 8px;
     left: 12px;
-    margin-top: 6px;
+    margin-top: 3px;
   }
 
   .card {
@@ -474,17 +467,17 @@ body {
 
   @keyframes typing-a {
     from { width: 0 }
-    to { width: 122px; }
+    to { width: 110px; }
   }
 
   @keyframes typing-b {
     from { width: 0 }
-    to { width: 200px; }
+    to { width: 185px; }
   }
 
   @keyframes typing-c {
     from { width: 0 }
-    to { width: 133px; }
+    to { width: 123px; }
   }
 }
 
