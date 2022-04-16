@@ -55,7 +55,7 @@ margin: 0;
 }
 
 body {
-    background-image: url("/media/DO5.gif");
+    background-image: url("/media/dotblue.gif");
     background-color: var(--dark-color);
     background-repeat: no-repeat;
     background-position: center top;
@@ -119,22 +119,23 @@ body {
 
 .pill-hover-l::before {
   content: '';
-  background-color: var(--highlight-color);
+  background-color: var(--light-color);
   position: absolute;
   border-radius: 50px;
-  left: -78px;
-  bottom: 20px;
-  width: 50px;
-  height: 50px;
+  left: -63px;
+  bottom: 21px;
+  width: 17px;
+  height: 17px;
   z-index: -1;
   transition: all .3s ease-in-out;
   box-shadow: 0 0 15px 5px #00000033;
 }
 
 .pill-hover-l:hover::before {
-  width: 80px;
-  height: 80px;
-  bottom: 12px;
+  background-color: var(--highlight-color);
+  width: 75px;
+  height: 75px;
+  bottom: 14px;
   left: -92px;
   box-shadow: 0 0 15px 5px #0000006c;
   
@@ -399,10 +400,16 @@ body {
 
 */
 
+@media screen and (max-height: 1100px) {
+  .top-section {
+    margin-top: 40px;
+  }
+}
+
 @media screen and (max-width: 635px) {
 
   .top-section {
-    left: 51%;
+    left: 50%;
   }
 
   #title-web {
@@ -425,9 +432,9 @@ body {
 
   .pill-hover-l::before {
     bottom: 12px;
-    left: -30px;
-    width: 20px;
-    height: 20px;
+    left: -25px;
+    width: 10px;
+    height: 10px;
   }
 
   .pill-hover-l:hover::before {
@@ -473,7 +480,7 @@ body {
     width: 10px;
     height: 10px;
     left: -7px;
-    margin-top: 5px;
+    margin-top: 6px;
   }
 
   .card {
@@ -520,9 +527,9 @@ body {
 
   .pill-hover-l::before {
     bottom: 8px;
-    left: -30px;
-    width: 20px;
-    height: 20px;
+    left: -23px;
+    width: 8px;
+    height: 8px;
   }
 
   .pill-hover-l:hover::before {
@@ -568,7 +575,7 @@ body {
     width: 8px;
     height: 8px;
     left: 12px;
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   .card {
