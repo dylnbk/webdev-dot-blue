@@ -44,6 +44,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
@@ -402,8 +403,8 @@ video {
 #bottom {
   position: relative;
   margin-top: 100vh;
-  background-color: #00889B;
-  height:150vh;
+  background-color: #000000;
+  height:100vh;
   min-height:100%;
   width:100%;
   box-shadow: 0 0 30px 10px #000000;
@@ -411,10 +412,12 @@ video {
 
 .title-bottom {
   color: #000000;
+  background-color: #00889B;
   text-align: center;
-  padding-top: 15vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
   font-weight: 900;
-  font-size: 115px;
+  font-size: 100px;
   letter-spacing: -6px;
 }
 
@@ -422,11 +425,10 @@ video {
   color: #000000;
   float: left;
   width: 50%;
-  padding: 0 10px;
 }
 
 .row {
-  margin-top: 15vh;
+  margin-top: 0vh;
 }
 
 .row:after {
@@ -436,18 +438,20 @@ video {
 }
 
 .tile {
-  border-radius: 15px;
-  padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
   text-align: center;
-  background-color: #00899bce;
-  transition: 1s ease-in-out;
+  background-color: #000000;
 }
 
-.tile:hover {
-  box-shadow: 0 0 20px 5px #00000046;
-  transform: scale(1.05, 1.05);
+img {
+  width: 100%;
+  filter: grayscale(40%) brightness(50%);
+  transition: 1s ease-in-out;
+  margin-bottom: -4px;
+}
+
+img:hover {
+  box-shadow: 0 0 20px 5px #000000;
+  filter: grayscale(0%) brightness(100%);
 }
 
 /*
@@ -491,6 +495,32 @@ video {
 @media screen and (max-height: 1100px) {
   .top-section {
     margin-top: 40px;
+  }
+}
+
+
+@media screen and (max-width: 1020px) {
+  img {
+    box-shadow: 0 0 10px 0 #000000;
+    filter: grayscale(0%) brightness(100%);
+  }
+}
+
+@media screen and (max-width: 830px) {
+
+  .title-bottom {
+    font-size: 65px;
+    margin-bottom: 0vh;
+    letter-spacing: -3px;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+
+  .column {
+    width: 100%;
+    display: block;
   }
 }
 
@@ -578,21 +608,6 @@ video {
     margin-left: 0px;
   }
 
-  .title-bottom {
-    font-size: 65px;
-    margin-bottom: 10vh;
-  }
-
-  .row {
-    margin-top: 0;
-  }
-
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-
   @keyframes typing-a {
     from { width: 0 }
     to { width: 130px; }
@@ -609,7 +624,8 @@ video {
   }
 }
 
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 365px) {
   #title-web {
     font-size: 60px;
     margin-left: 14%;
