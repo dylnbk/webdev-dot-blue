@@ -2,21 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>webdev.blue</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/media/forward.png" type="image/x-icon">
   </head>
   <body>
     <main>
-        <h1>Fuuuu</h1>  
-        <article>
-            <h2>Derp</h2>
-            <p>Flerp</p>
-            <p><a href="../index.html">Home</a> </p>
-        </article>
+      <div class="contact">
+          <h1 id="contacth1">Contact</h1>  
+          <form name="contact" method="POST" action="/pages/success.html" data-netlify="true">
+            <p>
+              <label>your email: </label>
+              <input class="email" type="email" name="email" autocomplete="off" required></input>
+            </p>
+            <p>
+              <label>message: </label>
+              <textarea class="message" name="message" required></textarea>
+            </p>
+            <p>
+              <button class="btncontact" type="submit">✉</button>
+            </p>
+          </form>
+        </div>
     </main>
 	  <script src="#"></script>
   </body>

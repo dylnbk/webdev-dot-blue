@@ -498,6 +498,128 @@ video {
   filter: grayscale(0%) brightness(100%);
 }
 
+/* Contact page */
+
+.contact {
+  margin-top: 20px;
+  text-align: center;
+  animation: fadein-head 3s;
+}
+
+#contacth1 {
+  font-size: 125px;
+  margin-bottom: 10vh;
+  letter-spacing: -5px;
+  text-shadow: 0px 0px 20px #000000, 0px 0px 15px #000000, 0px 0px 5px #000000,0px 0px 15px #000000;
+}
+
+.message {
+  width: 550px;
+  height: 20vh;
+  margin-bottom: 20px;
+  resize: vertical;
+  color: #FFF;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.232);
+  transition: 1s box-shadow;
+  outline: none; 
+  transition: 1s ease-in-out;
+}
+
+.email {
+  width: 550px;
+  height: 5vh;
+  margin-bottom: 20px;
+  color: #FFF;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.232);
+  outline: none; 
+  transition: 1s ease-in-out;
+}
+
+.message:hover {
+  border-bottom: 1px solid #00889B;
+}
+
+.email:hover {
+  border-bottom: 1px solid #00889B;
+}
+
+label {
+  font-family: 'UbuntuLight', sans-serif;
+  letter-spacing: 4px;
+  font-size: 22px;
+  display: block;
+  position: relative;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+input:focus {
+  border-bottom: 1px solid #00889B;
+ }
+input.visited {
+  border-bottom: 1px solid #00889B;
+ }
+
+textarea:focus {
+  border-bottom: 1px solid #00889B;
+ }
+ textarea.visited {
+  border-bottom: 1px solid #00889B;
+ }
+
+#returntext {
+  font-family: 'UbuntuLight', sans-serif;
+  letter-spacing: 4px;
+  padding: 0 15px;
+  font-size: 22px;
+  margin-top: 10vh;
+  text-shadow: 0px 0px 20px #00000000, 0px 0px 15px #00000000, 0px 0px 5px #00000000,0px 0px 15px #00000000;
+}
+
+#returnhere {
+  color: #00889B;
+  transition: all .5s ease-in-out;
+}
+
+#returnhere:hover {
+  color: var(--light-color);
+  text-shadow:
+    -0.4px -0.4px 1px var(--light-color),
+    0.4px -0.4px 1px var(--light-color),
+    -0.4px 0.4px 1px var(--light-color),
+    0.4px 0.4px 1px var(--light-color);
+}
+
+.btncontact {
+  background: transparent;
+  color: #FFF;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  animation:bouncy 5s infinite linear;
+  transition: 1s;
+  padding: 5px 15px 5px 15px;
+}
+
+.btncontact:hover {
+  transform: scale(1.5);
+  color: #00889B;
+}
+
+@keyframes bouncy {
+  0%{top:0em}
+  40%{left:0em}
+  43%{left:-0.35em}
+  46%{left:0em}
+  48%{left:-0.25em}
+  50%{left:0em}
+  100%{top:0em;}
+}
+
 /*
 @media screen and (max-width: 1023px) {
   #title-web {
@@ -660,6 +782,19 @@ video {
     left: 47%
   }
 
+  #contacth1 {
+    font-size: 85px;
+    letter-spacing: -5px;
+  }
+
+  .message {
+    width: 300px;
+  }
+  
+  .email {
+    width: 300px;
+  }
+
   @keyframes typing-a {
     from { width: 0 }
     to { width: 130px; }
@@ -754,6 +889,18 @@ video {
     height: 140px;
     width: 250px;
     margin-left: 0px;
+  }
+
+  #contacth1 {
+    font-size: 75px;
+  }
+
+  .message {
+    width: 200px;
+  }
+  
+  .email {
+    width: 200px;
   }
 
   @keyframes typing-a {
