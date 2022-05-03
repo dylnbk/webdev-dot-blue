@@ -170,7 +170,6 @@ video {
 }
 
 .dot::before {
-  position: relative;
   content: '';
   background-color: var(--highlight-color);
   position: absolute;
@@ -381,7 +380,8 @@ video {
 
 @keyframes caret-c {
   from { border-color: transparent }
-  50% { border-color: white }
+  45% { border-color: rgba(255, 255, 255, 0.908) }
+  55% { border-color: rgba(255, 255, 255, 0.845) }
 }
 
 .wrap-up {
@@ -396,6 +396,50 @@ video {
   height:100%;
   min-height:100%;
   width:100%;
+}
+
+.scrolldot {
+  position: absolute;
+  font-size: 30px;
+  left: 50%;
+  bottom: -10vh;
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: 
+    bounce 3s infinite,
+    fadelast 11s;
+  transition: .5s ease-in-out;
+}
+
+.scrolldot:hover {
+  color: #00889B;
+  font-size: 70px;
+  left: 49%;
+}
+
+.scrolldot:after {
+  content:'';
+  position:absolute;
+  top:-50px; bottom:-50px; 
+  left:-50px; right:-50px; 
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadelast {
+  from { opacity: 0; }
+  85% { opacity: 0;}
+  to   { opacity: 1; }
 }
 
 /* bottom section */
@@ -442,15 +486,15 @@ video {
   background-color: #000000;
 }
 
-img {
+.pageimg {
   width: 100%;
-  filter: grayscale(40%) brightness(50%);
+  filter: grayscale(60%) brightness(40%);
   transition: 1s ease-in-out;
   margin-bottom: -4px;
 }
 
-img:hover {
-  box-shadow: 0 0 20px 5px #000000;
+.pageimg:hover {
+  box-shadow: 0 0 10px 0 #000000;
   filter: grayscale(0%) brightness(100%);
 }
 
@@ -500,7 +544,7 @@ img:hover {
 
 
 @media screen and (max-width: 1020px) {
-  img {
+  .pageimg {
     box-shadow: 0 0 10px 0 #000000;
     filter: grayscale(0%) brightness(100%);
   }
@@ -606,6 +650,14 @@ img:hover {
     height: 140px;
     width: 250px;
     margin-left: 0px;
+  }
+
+  .scrolldot {
+    font-size: 15px;
+  }
+
+  .scrolldot:hover {
+    left: 47%
   }
 
   @keyframes typing-a {
