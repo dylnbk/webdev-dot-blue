@@ -529,7 +529,7 @@ video {
 
 .email {
   width: 550px;
-  height: 5vh;
+  height: 25px;
   margin-bottom: 20px;
   color: #FFF;
   background: transparent;
@@ -596,18 +596,20 @@ textarea:focus {
 
 .btncontact {
   background: transparent;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.702);
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   position: relative;
-  animation:bouncy 5s infinite linear;
-  transition: 1s;
+  animation: bouncy 5s infinite linear;
+  transition: all .5s ease-in-out;
   padding: 5px 15px 5px 15px;
+  border-radius: 10px;
 }
 
 .btncontact:hover {
-  transform: scale(1.5);
+  transform: scale(1.7);
   color: #00889B;
+  cursor: pointer;
 }
 
 @keyframes bouncy {
