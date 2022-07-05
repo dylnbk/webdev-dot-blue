@@ -486,7 +486,7 @@ video {
 
 .pageimg {
   width: 100%;
-  filter: grayscale(90%) brightness(90%);
+  filter: grayscale(20%) brightness(90%);
   transition: 1s ease-in-out;
   margin-bottom: -4px;
 }
